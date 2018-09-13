@@ -52,6 +52,12 @@ legend('CO2')
     
 linkaxes(ax, 'x')
 
+%% ISD Lite data, Rennes St-Jacques
+
+isd_lite = import_isdlite('data/FR-ST_JACQUES-lite-2015.txt'); % includes manual adjustement for NaNs and date
+head(isd_lite)
+plot(isd_lite.date, isd_lite.temp)
+
 %%
 % si on veut une timeseries
 a = timeseries(Temp.value, datestr(Temp.date));
