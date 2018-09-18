@@ -1,7 +1,7 @@
 % Exploration préparatoire pour le BE Données ISA
 % 10 septembre 2018
 
-tab = importfile('log-20150211-142309.csv');
+tab = importfile('data/log-20150211-142309.csv');
 head(tab, 4) % Matlab ? R2016b
 tail(tab, 4) % Matlab ? R2016b
 summary(tab)%  Matlab ? R2013b
@@ -58,6 +58,26 @@ isd_lite = import_isdlite('data/FR-ST_JACQUES-lite-2015.txt'); % includes manual
 head(isd_lite)
 plot(isd_lite.date, isd_lite.temp)
 
+%% Rééchantillonage
+
+% jeu de données de synthèse avec un trou
+t1 = datetime('2015-02-01 00:00:00'):minutes(30):datetime('2015-02-02'); % 1j
+t2 = datetime('2015-02-03 00:00:00'):minutes(30):datetime('2015-02-04'); % 1j
+t = [t1 t2];
+
+t(end-4) = '2015-02-03 22:00:10';
+
+rng(0)
+y = [randn(length(t2), 1);randn(length(t2), 1)+5];
+y(12:24) = NaN;
+tt = timetable(t', y);
+
+plot(t, tt.y, '-d');
+
+head(retime(tt, 'hourly'))% implicitement méthode 'fillwithmissing'
+head(retime(tt, 'hourly', 'linear'))
+tail(retime(tt, 'hourly', 'previous'))
+tail(retime(tt, 'hourly', 'next'))
 %%
 % si on veut une timeseries
 a = timeseries(Temp.value, datestr(Temp.date));
