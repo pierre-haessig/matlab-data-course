@@ -53,7 +53,7 @@ log_DD = retime(a, 'minutely', 'previous');
 
 figure
 ax(1) = subplot(2,1,1);
-plot(Temp.date, Temp.value)
+plot(Temp.date, Temp.Temp)
 legend('Temp')
 ylabel('°C')
 
@@ -79,7 +79,8 @@ plot(isd_lite.date, isd_lite.Text)
 isregular(isd_lite); 
 
 % valeurs manquantes: 105
-sum(isnan(isd_lite.Text)) % !! ne pas faire x == NaN, car NaN == NaN renvoie 0!
+disp('Missing values (NaN):')
+sum(ismissing(isd_lite.Text)) % !! ne pas faire x == NaN, car NaN == NaN renvoie 0!
 
 % trouver les irrégularités
 a = diff(isd_lite.date);
