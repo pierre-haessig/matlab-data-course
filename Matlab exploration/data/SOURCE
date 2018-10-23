@@ -1,0 +1,27 @@
+# Datasets sources
+
+
+## Delta Dore sensor log (inside air temperature, CO2...)
+
+file: `log-20150309-171821.csv`
+
+Delta Dore wireless sensor of the AUT research team.
+Sensor is in room 4XX (team meeting room), CentraleSupélec campus at Rennes
+
+
+## Presence record
+
+file: `fiche_presence.csv`
+
+Handwritten presence sheet in room 4XX, collectively filled by AUT team,
+compiled in one CSV file by Pierre Benech, June 2015
+
+
+## Weather history in Rennes
+
+file: `meteo_rennes_2015.txt`
+
+From [NOAA Integrated Surface Database (ISD) ](https://www.ncdc.noaa.gov/isd),
+data from the Rennes St-Jacques weather station.
+
+File in the "ISD Lite" format (cf. `documentation ISD-Lite 2006 format.pdf`)

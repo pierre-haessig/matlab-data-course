@@ -1,7 +1,7 @@
 <map version="freeplane 1.5.9">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="Storage&#xa;formats&#xa;of&#xa;tabular&#xa;data" FOLDED="false" ID="ID_192112974" CREATED="1536914601321" MODIFIED="1536934394754" VGAP_QUANTITY="20.0 pt"><hook NAME="MapStyle" zoom="1.61">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false;" show_note_icons="true"/>
+    <properties fit_to_viewport="false;" show_icon_for_attributes="true" show_note_icons="true"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -167,6 +167,7 @@
 <node TEXT="LibreOffice Calc" ID="ID_780329127" CREATED="1536917017273" MODIFIED="1536917203954" STYLE="bubble">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#999999" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_903662783" STARTINCLINATION="26;1;" ENDINCLINATION="10;35;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
+<node TEXT="Matlab .mat" ID="ID_1545995329" CREATED="1540279240007" MODIFIED="1540279278506" STYLE="bubble"/>
 <node TEXT="HDF5" ID="ID_1283514636" CREATED="1536917119020" MODIFIED="1536917149057" STYLE="bubble"/>
 <node TEXT="..." ID="ID_584722641" CREATED="1536917150266" MODIFIED="1536917153462"/>
 </node>
