@@ -31,7 +31,7 @@ nanmean(meteo.Temp)
 meteo_date = datetime(meteo.Annee, meteo.Mois, meteo.Jour,...
                       meteo.Heure, 0,0);
 % table -> timetable
-meteo_TT = table2timetable(meteo, 'RowTimes',date);
+meteo_TT = table2timetable(meteo, 'RowTimes', meteo_date);
 
 % sélectionner un mois : avec un timetable et un timerange
 TR = timerange('2015-06-01','2015-07-01');
@@ -65,7 +65,7 @@ log_datetime.Format = 'default';
 
 log_TT = table2timetable(log, 'RowTimes', log_datetime);
 
-
+	
 %a = log.type == 'indoor temperature';
 type = categorical(log.type);
 a = type == 'indoor temperature';
